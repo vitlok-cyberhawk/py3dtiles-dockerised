@@ -47,6 +47,12 @@ For example the `convert` command will look like
 docker run -it --rm -v "/PATH/TO/HOST/DIRECTORY/WITH/LiDAR":"/3ddata" py3dtiles convert YOUR_FILE.las
 ```
 
+On Windows
+
+```bash
+docker run -it --rm -v "C:\PATH\TO\HOST\DIRECTORY\WITH\LiDAR":"/3ddata" py3dtiles convert YOUR_FILE.las
+```
+
 ## Credits & questions
 
 Vitalij Lokucijevskij [vitalij@thecyberhawk.com](vitalij@thecyberhawk.com)
