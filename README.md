@@ -5,7 +5,7 @@
 
 Library source: [py3dtiles](https://github.com/Oslandia/py3dtiles)
 
-Library documentation:  [py3dtiles Docs](https://oslandia.github.io/py3dtiles/)
+Library documentation: [py3dtiles Docs](https://oslandia.github.io/py3dtiles/)
 
 Main features:
 
@@ -15,11 +15,11 @@ Main features:
 
 ## Requirements
 
-You MUST have the latest version of Docker installed.
+Have the latest version of Docker installed on the host machine.
 
 ## How to install and use
 
-### Instalation
+### Installation
 
 Download the repository and run the command below to build a Docker image.
 
@@ -34,10 +34,18 @@ docker build -t py3dtiles .
 Run the Docker container and mount the folder with the LiDAR/pointcloud data.
 
 ```bash
-docker run -it --mount type=bind,source="/PATH/TO/HOST/DIRECTORY/WITH/LiDAR",target=/py3ddata py3dtiles 
+docker run -it --mount type=bind,source="/PATH/TO/HOST/DIRECTORY/WITH/LiDAR",target=/3ddata py3dtiles
 ```
 
 Note: In the command above the `py3dtiles` is the name of the image. If you changed the name during the installation step you MUST change accordingly.
+
+You can use all CLI commands as per `py3dtiles` [documentation](https://oslandia.github.io/py3dtiles/).
+
+For example the `convert` command will look like
+
+```bash
+docker run -it --mount type=bind,source="/PATH/TO/HOST/DIRECTORY/WITH/LiDAR",target=/3ddata py3dtiles convert YOUR_FILE.las
+```
 
 ## Credits & questions
 
