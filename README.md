@@ -34,7 +34,7 @@ docker build -t py3dtiles .
 Run the Docker container and mount the folder with the LiDAR/pointcloud data.
 
 ```bash
-docker run -it -v "/PATH/TO/HOST/DIRECTORY/WITH/LiDAR":"/3ddata" py3dtiles
+docker run -it --rm -v "/PATH/TO/HOST/DIRECTORY/WITH/LiDAR":"/3ddata" py3dtiles
 ```
 
 Note: In the command above the `py3dtiles` is the name of the image. If you changed the name during the installation step you MUST change accordingly.
@@ -44,7 +44,7 @@ You can use all CLI commands as per `py3dtiles` [documentation](https://oslandia
 For example the `convert` command will look like
 
 ```bash
-docker run -it -v "/PATH/TO/HOST/DIRECTORY/WITH/LiDAR":"/3ddata" py3dtiles convert YOUR_FILE.las
+docker run -it --rm -v "/PATH/TO/HOST/DIRECTORY/WITH/LiDAR":"/3ddata" py3dtiles convert YOUR_FILE.las
 ```
 
 ## Credits & questions
